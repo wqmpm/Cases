@@ -3,10 +3,10 @@ window.onload=function(){
 	rta(1);
 	rta(2);
 	rta(3);
-    t=setInterval(showtime,500);	
-	t1=setInterval("rta(1)",500);
-	t2=setInterval("rta(2)",500);
-	t3=setInterval("rta(3)",500*60);
+        t=setInterval(showtime,500);	
+	t1=setInterval("rta(1)",500);//秒针转动
+	t2=setInterval("rta(2)",500);//分针转动
+	t3=setInterval("rta(3)",500*60);//时针转动
 	canvclk();
 } 
 
@@ -19,6 +19,7 @@ function rta(pter){
 	    var current=s*6;
         var secimg=document.getElementById('target1');
 	    secimg.style.transform = 'rotate('+current+'deg)';
+	    //transform属性2D旋转，rotate(angle),deg代表度数
 	    break;
 	    case 2:
 	    var m=nowtime.getMinutes();
@@ -38,7 +39,7 @@ function rta(pter){
 	}
 }
 
-function showtime(){
+function showtime(){//显示时间
 	var nowtime=new Date();
 	var h=nowtime.getHours();
 	var m=nowtime.getMinutes();
@@ -53,14 +54,14 @@ function checkTime(i){  //补位处理
     } 
     return i;
 }
-function canvclk(){
+function canvclk(){ //画布操作
     var canv=document.getElementById("clkcanvas");
 	var cxt=canv.getContext("2d");
 	canv.setAttribute("width",400);
 	canv.setAttribute("height",400);
 	cxt.fillStyle="#efefef";
     cxt.beginPath();
-    cxt.arc(200,200,180,0,Math.PI*2,true);
+    cxt.arc(200,200,180,0,Math.PI*2,true);//画圆
     cxt.closePath();
     cxt.fill();
     cxt.fillStyle="red";
@@ -80,10 +81,10 @@ function canvclk(){
         cxt.stroke();
     }
 
-    var c=document.getElementById("target5");
+    var c=document.getElementById("target5");//画布中指定位置插入图片
     cxt.drawImage(c,25,25,350,350);
 }
-function drline(obj,x1,y1,x2,y2){
+function drline(obj,x1,y1,x2,y2){//画出指定路径
     obj.lineWidth=10;
     obj.moveTo(x1,y1);
     obj.lineTo(x2,y2);
