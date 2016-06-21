@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Move</title>
+	<style type="text/css">
+	*{
+		margin:0;
+		padding:0;
+	}
+		div{
+			width:200px;
+			height:100px;
+			position: absolute;
+			left:-100px;
+			border: 2px solid black;
+			background:green;
+			filter: alpha(opacity=30);
+			opacity: 0.3;
+		}
+	</style>
+	<script src="move.js"></script>
+	<script type="text/javascript">
+		window.onload=function(){
+			var itarget=document.getElementById('div1');
+	        itarget.onmouseover=function(){
+                startMove(itarget,{width:250,height:200,left:0,opacity:100});
+            }
+            itarget.onmouseout=function(){
+            	startMove(this,{width:200,height:100,left:-100,opacity:30});
+            }
+		}
+	</script>
+</head>
+<body>
+<div id="div1"></div>	
+</body>
+</html>
