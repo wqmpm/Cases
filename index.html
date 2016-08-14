@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>企业网站</title>
+    <link rel="stylesheet" href="main.css" />
+    <script type="text/javascript">
+        window.onload=function(){
+	        switchSlider(1);
+        }
+		function switchSlider(n){
+		  var imgs=document.getElementsByClassName('imgi');
+		  var control=document.getElementsByClassName('controli');
+		  var imgi=document.getElementById('img'+n);
+		  var ctrli=document.getElementById('sliderbar'+n);
+		  for(var i=0;i<control.length;i++){
+			  imgs[i].className=imgs[i].className
+				  .replace(' active','');
+			  control[i].className=control[i].className
+				  .replace(' ctrlactive','');
+		  }
+	      imgi.className+=' active';
+		  ctrli.className+=' ctrlactive';
+        }
+    </script>
+  </head>
+  
+  <body>
+<!-- 导航菜单 -->
+  <nav>
+      <a href="#" class="navpic"><img src="http://img.mukewang.com/53edadad0001efe202000070.jpg" /></a>
+      <a href="#">首页</a>
+      <a href="#">产品特色</a>
+      <a href="#">解决方案</a>
+      <a href="#">产品价格</a>
+      <a href="#">帮助中心</a>
+      <a href="#">关于我们</a>
+  </nav>
+<!-- 幻灯片 -->
+  <div class="slider">
+      <div class="imgs">
+          <!--<div class="active"><img src="http://img.mukewang.com/53edad8c000175cb00300029.jpg"/></div>-->
+          <div id="img1" class="imgi active" >
+             <img src="http://img.mukewang.com/53edad3e0001afad10000318.jpg" height="318" width="1000"/>
+          </div>
+          <div id="img2" class="imgi">
+              <img src="http://img.mukewang.com/53edad2c0001b61310000314.jpg" height="318" width="1000"/>
+          </div>
+          <div id="img3" class="imgi">
+              <img src="http://img.mukewang.com/53edad1600019ae910000310.jpg" height="318" width="1000"/>
+          </div>
+      </div>
+      <div class="sliderbar">
+          <a href="javascript:switchSlider(1);" class="controli ctrlactive" id="sliderbar1"></a>
+          <a href="javascript:switchSlider(2);" class="controli" id="sliderbar2"></a>
+          <a href="javascript:switchSlider(3);" class="controli" id="sliderbar3"></a>
+      </div>
+  </div>
+<!-- 滚动新闻 -->
+  <div class="scrollnews">
+      <div class="scrollnews_left">滚动新闻</div>
+      <div class="scrollnews_right">这是滚动新闻</div>
+  </div>
+  <!-- 学习资料 -->
+  <div class="study_src">
+    <a href="#" class="learnsrc"><img src="http://img.mukewang.com/53edad54000119fb03300130.jpg"><p class="pictitle">玩转BootStrap</p></a>
+    <a href="#" class="learnsrc_mid"><img src="http://img.mukewang.com/53edad690001260a03300130.jpg"><p class="pictitle">企业网站案例</p></a>
+     <a href="#" class="learnsrc"><img src="http://img.mukewang.com/53edad7a0001cde803300130.jpg"><p class="pictitle">Javascript基础</p></a> 
+  </div>
+  <!-- 资讯内容 -->
+  <div class="content">
+    <div class="left">
+      <p class="cont_title">新闻中心</p>
+      <div class="news">
+      <ul>
+        <li>
+          <div class="data">8月<br/>23日</div>
+          <div class="newscont">
+            <h4>学习计划之"Android攻城狮初养成"</h4>
+            <p><a href="/">想成为Android攻城狮?想开发一款专属App?没有任何基础的你,应该从何学起?</a></p>
+          </div>
+        </li>
+        <li>
+          <div class="data">8月<br/>23日</div>
+          <div class="newscont">
+            <h4>学习计划之"Android攻城狮初养成"</h4>
+            <p><a href="/">想成为Android攻城狮?想开发一款专属App?没有任何基础的你,应该从何学起?</a></p>
+          </div>
+        </li>
+        <li>
+          <div class="data">8月<br/>23日</div>
+          <div class="newscont">
+            <h4>学习计划之"Android攻城狮初养成"</h4>
+            <p><a href="/">想成为Android攻城狮?想开发一款专属App?没有任何基础的你,应该从何学起?</a></p>
+          </div>
+        </li>
+      </ul>
+      </div>
+    </div>
+    <div class="middle">
+      
+      <p class="cont_title">热门活动</p>
+      <div class="activecont">
+      <img src="http://img.mukewang.com/53edacdd0001b8e804820302.jpg" alt="2048" width="280" height="120" />
+      <ul class="code-z">
+        <li><a href="/">慕课网2048源码征集</a></li>
+        <li><a href="/">慕课网2048源码征集</a></li>
+        <li><a href="/">慕课网2048源码征集</a></li>
+        <li><a href="/">慕课网2048源码征集</a></li>
+        <li><a href="/">慕课网2048源码征集</a></li>
+     </ul>
+     </div>
+    </div>
+    <div class="right">
+      
+      <p class="cont_title">联系我们</p>
+      <div class="addr">
+      <address>
+          讲师招募<br />
+          邹同学<br />
+          电话：18888888888<br />
+          QQ:474437345<br />
+                  Email:474437345@qq.com<br />
+        </address>
+        <br />
+        <address>
+          网站合作<br />
+          吕同学<br />
+          电话：18458558898<br />
+          QQ:45437346<br />
+          Email:45437346@qq.com
+        </address>
+        </div>
+    </div>
+  </div>
+  <!-- 版权信息 -->
+  <footer>
+    <p><small>Copyright © 2013 imooc.com All Rights Reserved 京ICP备 13046642号-2</small></p>
+  </footer>
+  </body>
+</html> 
+
+
+    <!-- 
+    <div class="activity common">
+      <h3>热门活动</h3>
+      <div class="activity-content">
+        
+      </div>
+    </div>
+    <div class="contact common mr0">
+      <h3>联系我们</h3>
+      <div class="contact-content">
+        
+         -->
